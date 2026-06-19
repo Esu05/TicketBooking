@@ -1,0 +1,120 @@
+.wrapper { display: flex; flex-direction: column; align-items: center; gap: 1.2rem; }
+
+.stage {
+  background: var(--brand);
+  color: #fff;
+  width: min(60%, 500px);
+  margin-inline: auto;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 0 0 50px 50px;
+  font-size: .8rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+
+.seatingArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid {
+  width: fit-content;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  min-width: max-content;
+}
+
+.seats {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: .35rem;
+}
+
+.rowLabel {
+  width: 1.5rem;
+  font-size: .8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.seat {
+  width: 2.1rem;
+  height: 2.1rem;
+  border-radius: 6px 6px 3px 3px;
+  font-size: .7rem;
+  font-weight: 600;
+  border: 2px solid transparent;
+  transition: transform .1s, box-shadow .1s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seat:hover:not(:disabled) { transform: scale(1.12); box-shadow: 0 2px 8px rgba(0,0,0,.15); }
+
+.available {
+  background: var(--seat-available);
+  border-color: var(--seat-available-border);
+  color: #065f46;
+  cursor: pointer;
+}
+
+.selected {
+  background: var(--seat-selected);
+  border-color: var(--seat-selected-border);
+  color: #fff;
+  cursor: pointer;
+}
+
+.reserved {
+  background: var(--seat-reserved);
+  border-color: var(--seat-reserved-border);
+  color: #92400e;
+}
+
+.booked {
+  background: var(--seat-booked);
+  border-color: var(--seat-booked-border);
+  color: #991b1b;
+}
+
+.disabled {
+  cursor: not-allowed !important;
+  opacity: .7;
+}
+
+.legend {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: .5rem;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .8rem;
+  color: var(--text-muted);
+}
+
+.dot {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 4px;
+  border: 2px solid transparent;
+}
+
+.dot.available { background: var(--seat-available); border-color: var(--seat-available-border); }
+.dot.selected  { background: var(--seat-selected);  border-color: var(--seat-selected-border);  }
+.dot.reserved  { background: var(--seat-reserved);  border-color: var(--seat-reserved-border);  }
+.dot.booked    { background: var(--seat-booked);    border-color: var(--seat-booked-border);    }

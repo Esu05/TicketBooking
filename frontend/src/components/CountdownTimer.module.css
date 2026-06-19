@@ -1,0 +1,30 @@
+.timer {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .6rem 1.2rem;
+  border-radius: 8px;
+  font-size: .9rem;
+  background: #ecfdf5;
+  color: #065f46;
+  border: 1.5px solid #a7f3d0;
+  transition: all .3s;
+}
+
+.urgent {
+  background: #fff7ed;
+  color: #c2410c;
+  border-color: #fed7aa;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.expired {
+  background: #fef2f2;
+  color: var(--danger);
+  border-color: #fecaca;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .7; }
+}

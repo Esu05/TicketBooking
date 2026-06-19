@@ -1,0 +1,61 @@
+.page { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+.center { display: flex; justify-content: center; padding: 4rem 1rem; }
+
+.header { margin-bottom: 2rem; }
+.header h1 { font-size: 1.8rem; font-weight: 700; }
+.header p { color: var(--text-muted); margin-top: .25rem; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: transform .15s, box-shadow .15s;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: 1.5px solid transparent;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,.1);
+  border-color: var(--brand-light);
+}
+
+.cardHeader { display: flex; gap: 1rem; align-items: flex-start; }
+
+.dateBox {
+  background: var(--brand-light);
+  border-radius: 8px;
+  padding: .6rem .9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 3.5rem;
+  flex-shrink: 0;
+}
+
+.day { font-size: 1.4rem; font-weight: 700; color: var(--brand); line-height: 1; }
+.month { font-size: .7rem; font-weight: 600; color: var(--brand); text-transform: uppercase; }
+
+.cardInfo { flex: 1; }
+.name { font-size: 1.05rem; font-weight: 700; margin-bottom: .3rem; }
+.venue, .time { font-size: .82rem; color: var(--text-muted); margin-top: .15rem; }
+
+.desc { font-size: .85rem; color: var(--text-muted); line-height: 1.5; }
+
+.footer { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+
+.seatBar { display: flex; flex-direction: column; gap: .3rem; flex: 1; }
+.seatBarTrack { height: 6px; background: #e5e7eb; border-radius: 99px; overflow: hidden; }
+.seatBarFill { height: 100%; border-radius: 99px; transition: width .3s; }
+.seatBar span { font-size: .78rem; font-weight: 600; }
